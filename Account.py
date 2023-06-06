@@ -1,4 +1,3 @@
-               
 class Account:
     def _init_(self, name, account_number):
         self.name = name
@@ -59,6 +58,7 @@ class Account:
             self.balance -= amount
             destination_account.balance += amount
             return "You have transferred KES "+str(amount)+" from "+self.name+" account number "+str(self.account_number)+" to "+destination_account.name+" account number "+str(destination_account.account_number)+". Your new balance is KES "+str(self.balance)+"."
+        
     def print_statement(self):
         transactions = self.deposits + self.withdrawals
         statement = ""
@@ -67,5 +67,7 @@ class Account:
           amount = transaction["amount"]
           statement += f"{narration} - {amount}\n"
         return statement    
+    
+    
               
   
