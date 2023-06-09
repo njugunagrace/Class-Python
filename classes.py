@@ -122,7 +122,8 @@ fruit1 = Fruit("Fruit 1", "Power 1", "Effect 1")
 fruit2 = Fruit("Fruit 2", "Power 2", "Effect 2")
 
 data_base=[]
-data_base.push(fruit1,fruit2)
+data_base.append(fruit1)
+data_base.append(fruit2)
 
 class BaobabTree:
     def __init__(self):
@@ -158,38 +159,36 @@ class Drum:
         self.material = material
         self.size = size
 
-    def play_sound(self):
+    def make_sound(self,tone):
+        return f"The drum produces ${tone}"
         
-        pass
 
 class Djembe(Drum):
-    def __init__(self, material, size):
-        super().__init__(material, size)
+    # def __init__(self, material, size):
+    #     super().__init__(material, size)
 
-    def play_sound(self):
-      
-        pass
+    def make_sound(self,tone):
+        return f"The drum produces ${tone}"
 
 class TalkingDrum(Drum):
     def __init__(self, material, size):
         super().__init__(material, size)
 
-    def play_sound(self):
-      
-        pass
+    def make_sound(self,tone):
+        return f"The drum produces ${tone}"
 
 class Bougarabou(Drum):
     def __init__(self, material, size):
         super().__init__(material, size)
 
-    def play_sound(self):
-     pass
+    def make_sound(self,tone):
+        return f"The drum produces ${tone}"
 
 djembe = Djembe("Wood", "Medium")
 talking_drum= TalkingDrum("Leather", "Large")
 bougarabou = Bougarabou("Wood", "Large")
 
-djembe.play_sound()
-talking_drum.play_sound()
-bougarabou.play_sound()
+djembe.make_sound()
+talking_drum.make_sound()
+bougarabou.make_sound()
    
